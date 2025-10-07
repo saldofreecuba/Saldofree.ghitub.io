@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Saldo | CUBAMAXTRAVEL</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para un mejor aspecto */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* CAMBIO: Fondo con imagen de placeholder azul más vibrante (simulando viajes) */
+            background-image: url('https://placehold.co/1200x800/007bff/ffffff/png?text=CUBAMAX+VIAJES');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+            position: relative; /* Necesario para el overlay */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Capa de overlay oscura para mejorar la legibilidad del texto del formulario */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* CAMBIO: Ligeramente menos oscuro para un fondo más visible (40% de opacidad) */
+            background-color: rgba(0, 0, 0, 0.40); 
+            z-index: 0;
+        }
+
+        /* Asegura que el contenedor del formulario esté sobre el overlay */
+        .content-container {
+            z-index: 10; 
+            position: relative;
+        }
+
+        /* Estilo para el contenedor principal */
+        .card-container {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-container:hover {
+            transform: translateY(-2px); /* Efecto sutil al pasar el mouse/tocar */
+        }
+
+        /* Estilo para el select box con flecha personalizada */
+        .custom-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2310b981'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.5em 1.5em;
+            padding-right: 3rem;
+        }
+
+        /* Estilos para el campo de número de tarjeta copiado */
+        .copied {
+            animation: pulse-green 1.5s infinite;
+        }
+
+        @keyframes pulse-green {
+            0%, 100% {
+                background-color: #d1fae5; /* green-100 */
+                border-color: #10b981; /* green-500 */
+            }
+            50% {
+                background-color: #ecfdf5; /* green-50 */
+                border-color: #059669; /* green-600 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor Principal de la Aplicación (Asegurado sobre el fondo) -->
+    <div class="w-full max-w-sm bg-white p-6 md:p-8 shadow-2xl rounded-xl card-container content-container mt-4">
+
+        <!-- Banner de Información Importante (Verde) -->
+        <div class="bg-green-50 border-t-4 border-green-500 rounded-lg text-green-800 px-4 py-3 shadow-md mb-6" role="alert">
+            <div class="flex items-start">
+                <!-- Icono de chequeo (check) -->
+                <svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div>
+                    <p class="font-bold text-sm">PÁGINA OFICIAL DE CUBAMAXTRAVEL</p>
+                    <p class="text-xs mt-1">Contacto para dudas: <a href="mailto:cubamaxtravelsaldofree@gmail.com" class="font-semibold underline hover:text-green-600">cubamaxtravelsaldofree@g
